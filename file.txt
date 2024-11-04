@@ -1,0 +1,31 @@
+Projet : Gestion d'un système de réservation de logements
+
+Description du projet : Vous devez concevoir une API REST pour une application de réservation de logements. L’application gère des hôtes, des logements, et des réservations, avec des relations entre les entités comme suit :
+Hôte (Host) : représente une personne ou une entreprise possédant plusieurs logements.
+Relation : OneToMany avec Logement (un hôte peut avoir plusieurs logements).
+
+Logement (Accommodation) : représente un bien immobilier à louer (maison, appartement).
+Relation : ManyToOne avec Hôte.
+Relation : OneToMany avec Réservation (une réservation unique par période).
+
+Client (Guest) : représente la personne qui réserve un logement.
+Relation : OneToOne avec DétailsClient (profil complet du client).
+
+Réservation (Booking) : une réservation effectuée par un client pour un logement spécifique et une période donnée.
+Relation : ManyToOne avec Logement.
+Relation : OneToOne avec Client (chaque réservation est liée à un client unique).
+
+DétailsClient (GuestDetails) : informations supplémentaires sur le client.
+Relation : OneToOne avec Client (chaque client a des détails spécifiques).
+
+Exigences techniques :
+Fournir des points d'API REST pour chaque entité avec des méthodes CRUD.
+Implémenter des contrôleurs avec gestion d’erreurs et validation des données.
+Utiliser les relations OneToMany et OneToOne entre les entités.
+Inclure un endpoint pour vérifier la disponibilité d'un logement pour une période donnée.
+
+Critères de réussite :
+Modélisation correcte des entités et des relations en utilisant les annotations @OneToMany, @ManyToOne, et @OneToOne.
+Endpoints REST fonctionnels avec des réponses JSON.
+Gestion d’erreurs cohérente et retour d'informations compréhensibles en cas d'erreur de requête.
+Les collections postman pour tester l’API
